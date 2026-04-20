@@ -4,21 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mishtaab Fashions</title>
+<title>Mishtaab Fashions | Bangalore</title>
 
 <!-- SOCIAL PREVIEW -->
-<meta property="og:type" content="website">
+<meta property="og:title" content="Mishtaab Fashions">
+<meta property="og:description" content="Trendy & Elegant Fashion Collection">
+<meta property="og:image" content="logo.png">
 <meta property="og:url" content="https://terasynctech.github.io/mishtaab-fashions/">
-
-<meta property="og:title" content="Mishtaab Fashions - Bangalore">
-<meta property="og:description" content="Exclusive Ladies Dress Materials | Shop Your Style">
-
-<meta property="og:image" content="https://terasynctech.github.io/mishtaab-fashions/logo.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mishtaab Fashions">
-<meta name="twitter:description" content="Premium Ladies Fashion Store">
-<meta name="twitter:image" content="https://terasynctech.github.io/mishtaab-fashions/logo.png">
 
 <link rel="icon" href="logo.png">
 
@@ -26,220 +18,198 @@
 
 /* BODY */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #020024, #090979, #000000);
-    color: #fff;
-    text-align: center;
-    overflow-x: hidden;
+    margin:0;
+    font-family: "Segoe UI", sans-serif;
+    background:#fff;
+    color:#222;
 }
 
-/* GLOW EFFECT */
-body::before {
-    content: "";
-    position: fixed;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(255,0,150,0.3), transparent);
-    top: -100px;
-    left: -100px;
-    animation: glowMove 6s infinite alternate;
-    z-index: -1;
+/* HERO */
+.hero {
+    height:100vh;
+    background:url('hero.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
 }
 
-@keyframes glowMove {
-    0% { transform: translate(0,0); }
-    100% { transform: translate(200px,200px); }
+.hero::after {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
 }
 
-/* CONTAINER */
-.container {
-    max-width: 420px;
-    margin: auto;
-    padding: 20px;
+.hero-content {
+    position:relative;
+    z-index:2;
+    color:#fff;
 }
 
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.06);
-    border-radius: 25px;
-    padding: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 50px rgba(255,0,150,0.3);
-    animation: fadeUp 1s ease-in-out;
-}
-
-@keyframes fadeUp {
-    from {opacity:0; transform: translateY(30px);}
-    to {opacity:1; transform: translateY(0);}
-}
-
-/* LOGO */
 .logo {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    animation: float 3s infinite ease-in-out;
+    width:100px;
+    margin-bottom:10px;
 }
 
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-/* TITLE */
 h1 {
-    font-size: 22px;
-    color: #ffd700;
-    margin: 10px 0;
+    font-size:32px;
+    margin:10px 0;
 }
 
-/* TEXT */
 .tagline {
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* BADGE */
-.badge {
-    margin-top: 10px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid #ffd700;
-    color: #ffd700;
-    display: inline-block;
-    font-size: 13px;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 5px #ffd700; }
-    50% { box-shadow: 0 0 25px #ffd700; }
-    100% { box-shadow: 0 0 5px #ffd700; }
+    color:#ffd700;
 }
 
 /* BUTTON */
 .btn {
-    display: block;
-    margin: 12px auto;
-    padding: 13px;
-    width: 90%;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    background: linear-gradient(90deg, #ff0080, #7928ca);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    display:inline-block;
+    margin:8px;
+    padding:12px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(90deg,#ff0080,#ff8c00);
+    transition:0.3s;
 }
-
-/* BUTTON GLOW */
-.btn::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    top: 0;
-    left: -100%;
-    transition: 0.5s;
-}
-
-.btn:hover::before {
-    left: 100%;
-}
-
 .btn:hover {
-    transform: scale(1.06);
+    transform:scale(1.08);
 }
 
-/* SERVICES */
-.services {
-    margin-top: 20px;
-    text-align: left;
+/* SECTION */
+.section {
+    padding:40px 20px;
+    max-width:900px;
+    margin:auto;
 }
 
-.services h3 {
-    text-align: center;
-    color: #ffd700;
+/* CARD */
+.card {
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-.services li {
-    margin: 8px 0;
-    color: #ddd;
+/* TITLES */
+h2 {
+    color:#ff0080;
+}
+
+/* LIST */
+ul {
+    padding-left:20px;
+}
+
+/* GALLERY */
+.gallery {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+.gallery img {
+    width:100%;
+    border-radius:10px;
 }
 
 /* FOOTER */
 .footer {
-    margin-top: 15px;
-    font-size: 12px;
-    color: #888;
+    text-align:center;
+    padding:20px;
+    background:#111;
+    color:#fff;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-<div class="card">
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
 
-<!-- LOGO -->
 <img src="logo.png" class="logo">
 
 <h1>Mishtaab Fashions</h1>
+<p class="tagline">✨ Trend • Style • Elegance</p>
 
-<div class="tagline">
-Exclusive Ladies Dress Materials 💖<br>
-Shop Your Style
+<p>Premium Fashion for Every Occasion</p>
+
+<a class="btn" href="tel:+919035398801">📞 Call</a>
+<a class="btn" href="https://wa.me/919035398801">💬 WhatsApp</a>
+<a class="btn" href="https://www.instagram.com/mishtaab_fashions" target="_blank">📸 Instagram</a>
+
+</div>
 </div>
 
-<div class="badge">
-Premium Fashion Store - Bangalore
+<!-- ABOUT -->
+<div class="section">
+<div class="card">
+<h2>👗 About Us</h2>
+<p>
+Mishtaab Fashions is your one-stop destination for stylish and affordable clothing.
+We offer modern designs, premium fabrics, and trendy collections for all age groups.
+</p>
 </div>
 
-<!-- BUTTONS -->
-<a class="btn" href="tel:+919035398801">📞 Call Reshma</a>
-
-<a class="btn" href="tel:+919535333302">📞 Call Khalid</a>
-
-<a class="btn" href="https://wa.me/919035398801?text=Hi%20I%20am%20interested%20in%20your%20collection">
-💬 WhatsApp
-</a>
-
-<a class="btn" href="https://www.instagram.com/mishtaab_fashions" target="_blank">
-📸 Instagram
-</a>
-
-<a class="btn" href="https://maps.google.com/?q=Renu+Arcade+HBR+Layout+Bangalore" target="_blank">
-📍 Visit Store
-</a>
-
-<a class="btn" href="contact.vcf" download>
-📥 Save Contact
-</a>
-
-<!-- SERVICES -->
-<div class="services">
-<h3>👗 Our Collection</h3>
-
+<!-- COLLECTION -->
+<div class="card">
+<h2>🛍️ Our Collection</h2>
 <ul>
-<li>Designer Dress Materials</li>
-<li>Festive Collections</li>
-<li>Summer Cotton Collection</li>
-<li>Daily Wear Collection</li>
-<li>Exclusive Ladies Wear</li>
+<li>Ladies Wear – Kurtis, Sarees, Dresses</li>
+<li>Gents Wear – Shirts, T-Shirts, Jeans</li>
+<li>Kids Wear</li>
+<li>Ethnic & Festive Collection</li>
+<li>Daily Wear</li>
 </ul>
 </div>
 
-<div class="footer">
-Powered by TeraCard 🚀
+<!-- GALLERY -->
+<div class="card">
+<h2>📸 Our Store</h2>
+<div class="gallery">
+<img src="hero.png">
+<img src="inside1.png">
+<img src="inside2.png">
+<img src="banner.png">
+</div>
+</div>
+
+<!-- WHY US -->
+<div class="card">
+<h2>⭐ Why Choose Us</h2>
+<ul>
+<li>✔ Latest Fashion Trends</li>
+<li>✔ Affordable Pricing</li>
+<li>✔ Premium Quality</li>
+<li>✔ Wide Variety</li>
+<li>✔ Friendly Service</li>
+</ul>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+<h2>📍 Visit Us</h2>
+<p>
+Renu Arcade, 31/8 Shop No.2,<br>
+1st Stage, 2nd Block HBR Layout,<br>
+Bangalore - 560043<br>
+Landmark: Next to Yuan Restaurant
+</p>
+
+<a class="btn" href="https://maps.app.goo.gl/wmHBUsMnBCAQAjuG7" target="_blank">📍 Location</a>
+<a class="btn" href="contact.vcf" download>📥 Save Contact</a>
 </div>
 
 </div>
+
+<!-- FOOTER -->
+<div class="footer">
+Mishtaab Fashions | 📞 9035398801 / 9535333302
 </div>
 
 </body>
