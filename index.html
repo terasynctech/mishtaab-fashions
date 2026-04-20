@@ -4,123 +4,124 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mishtaab Fashions | Bangalore</title>
+<title>Mishtaab Fashions | Premium Style</title>
 
-<!-- SOCIAL PREVIEW -->
-<meta property="og:title" content="Mishtaab Fashions">
-<meta property="og:description" content="Trendy & Elegant Fashion Collection">
-<meta property="og:image" content="logo.png">
-<meta property="og:url" content="https://terasynctech.github.io/mishtaab-fashions/">
-
-<link rel="icon" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* BODY */
+/* ===== GLOBAL ===== */
 body {
     margin:0;
-    font-family: "Segoe UI", sans-serif;
-    background:#fff;
-    color:#222;
+    font-family:'Poppins', sans-serif;
+    background: linear-gradient(135deg,#ff416c,#ff4b2b,#ff6a00);
+    color:#fff;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
     height:100vh;
-    background:url('hero.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url('hero.png') center/cover no-repeat;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    position:relative;
 }
 
-.hero::after {
-    content:"";
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.6);
+.hero-content img {
+    width:180px;
+    margin-bottom:20px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
 }
 
-.hero-content {
-    position:relative;
-    z-index:2;
-    color:#fff;
-}
-
-.logo {
-    width:100px;
-    margin-bottom:10px;
-}
-
-h1 {
-    font-size:32px;
+.hero h1 {
+    font-size:42px;
     margin:10px 0;
 }
 
-.tagline {
-    color:#ffd700;
+.hero p {
+    color:#eee;
+    font-size:16px;
 }
 
-/* BUTTON */
+/* ===== GLASS BUTTON ===== */
 .btn {
     display:inline-block;
-    margin:8px;
-    padding:12px 22px;
+    margin:10px;
+    padding:12px 25px;
     border-radius:30px;
     text-decoration:none;
     color:white;
-    background:linear-gradient(90deg,#ff0080,#ff8c00);
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
     transition:0.3s;
 }
+
 .btn:hover {
-    transform:scale(1.08);
+    transform:scale(1.1);
+    background: rgba(255,255,255,0.25);
 }
 
-/* SECTION */
+/* ===== SECTION ===== */
 .section {
-    padding:40px 20px;
-    max-width:900px;
+    padding:50px 20px;
+    max-width:1100px;
     margin:auto;
 }
 
-/* CARD */
+/* ===== GLASS CARD ===== */
 .card {
-    background:#fff;
-    padding:20px;
-    border-radius:15px;
-    margin-top:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.12);
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:25px;
+    backdrop-filter: blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    transition:0.4s;
 }
 
-/* TITLES */
+.card:hover {
+    transform:translateY(-5px);
+}
+
+/* ===== TITLES ===== */
 h2 {
-    color:#ff0080;
+    color:#fff;
+    margin-bottom:10px;
 }
 
-/* LIST */
+/* ===== LIST ===== */
 ul {
     padding-left:20px;
 }
+li {
+    margin:8px 0;
+}
 
-/* GALLERY */
+/* ===== GALLERY ===== */
 .gallery {
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
 }
 .gallery img {
     width:100%;
-    border-radius:10px;
+    border-radius:15px;
+    transition:0.4s;
+}
+.gallery img:hover {
+    transform:scale(1.05);
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer {
     text-align:center;
-    padding:20px;
-    background:#111;
+    padding:25px;
     color:#fff;
+    font-size:14px;
+    background: rgba(0,0,0,0.3);
 }
 
 </style>
@@ -132,11 +133,10 @@ ul {
 <div class="hero">
 <div class="hero-content">
 
-<img src="logo.png" class="logo">
+<img src="logo.png">
 
 <h1>Mishtaab Fashions</h1>
-<p class="tagline">✨ Trend • Style • Elegance</p>
-
+<p>✨ Trend • Style • Elegance</p>
 <p>Premium Fashion for Every Occasion</p>
 
 <a class="btn" href="tel:+919035398801">📞 Call</a>
@@ -146,17 +146,17 @@ ul {
 </div>
 </div>
 
-<!-- ABOUT -->
+<!-- CONTENT -->
 <div class="section">
+
 <div class="card">
 <h2>👗 About Us</h2>
 <p>
-Mishtaab Fashions is your one-stop destination for stylish and affordable clothing.
+Mishtaab Fashions is your one-stop destination for stylish and affordable clothing. 
 We offer modern designs, premium fabrics, and trendy collections for all age groups.
 </p>
 </div>
 
-<!-- COLLECTION -->
 <div class="card">
 <h2>🛍️ Our Collection</h2>
 <ul>
@@ -168,54 +168,37 @@ We offer modern designs, premium fabrics, and trendy collections for all age gro
 </ul>
 </div>
 
-<!-- GALLERY -->
-<div class="card">
-<h2>📸 Our Store</h2>
-<div class="gallery">
-<img src="hero.jpg">
-<img src="inside1.jpg">
-<img src="inside2.jpg">
-<img src="banner.jpg">
-</div>
-</div>
-
-<!-- WHY US -->
 <div class="card">
 <h2>⭐ Why Choose Us</h2>
 <ul>
-<li>✔ Latest Fashion Trends</li>
-<li>✔ Affordable Pricing</li>
-<li>✔ Premium Quality</li>
-<li>✔ Wide Variety</li>
-<li>✔ Friendly Service</li>
+<li>Premium Quality Products</li>
+<li>Latest Fashion Trends</li>
+<li>Affordable Pricing</li>
+<li>Friendly Customer Service</li>
 </ul>
 </div>
 
-<!-- CONTACT -->
+<div class="card">
+<h2>📸 Our Store</h2>
+<div class="gallery">
+<img src="inside1.png">
+<img src="inside2.png">
+<img src="banner.png">
+</div>
+</div>
+
 <div class="card">
 <h2>📍 Visit Us</h2>
-<p>
-Renu Arcade, 31/8 Shop No.2,<br>
-1st Stage, 2nd Block HBR Layout,<br>
-Bangalore - 560043<br>
-Landmark: Next to Yuan Restaurant
-</p>
+<p>Renu Arcade, HBR Layout, Bangalore</p>
 
-<a class="btn" href="https://maps.app.goo.gl/wmHBUsMnBCAQAjuG7" target="_blank">📍 Location</a>
-<a class="btn" href="contact.vcf" download>📥 Save Contact</a>
+<a class="btn" href="https://maps.app.goo.gl/wmHBUsMnBCAQAjuG7?g_st=aw" target="_blank">📍 Location</a>
 </div>
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
-    <p>Mishtaab Fashions</p>
-    <p>📞 9035398801 / 9535333302</p>
-
-    <p style="margin-top:10px; font-size:13px;">
-        Powered by 
-        <a href="https://www.terasynctech.com" target="_blank" style="color:#ffd700; text-decoration:none; font-weight:bold;">
-            TeraSyncTech 🚀
-        </a>
-    </p>
+Powered by TeraSyncTech 🚀
 </div>
+
+</body>
+</html>
