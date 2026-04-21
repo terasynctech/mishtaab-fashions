@@ -14,65 +14,80 @@
 body {
     margin:0;
     font-family:'Poppins', sans-serif;
-    background: linear-gradient(135deg,#ff416c,#ff4b2b,#ff6a00);
     color:#fff;
+    background: linear-gradient(-45deg, #ff00cc, #3333ff, #ff6a00, #ff0080);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
 }
 
 /* ===== HERO ===== */
 .hero {
     height:100vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url('hero.png') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)), url('hero.png');
+    background-size: cover;
+    background-position: center;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
+    animation: zoomHero 20s infinite alternate;
+}
+
+@keyframes zoomHero {
+    from {background-size:100%;}
+    to {background-size:110%;}
 }
 
 .hero-content img {
-    width:180px;
+    width:220px;
     margin-bottom:20px;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
 }
 
+/* ===== TEXT ===== */
 .hero h1 {
-    font-size:42px;
+    font-size:48px;
     margin:10px 0;
 }
 
 .hero p {
     color:#eee;
-    font-size:16px;
 }
 
-/* ===== GLASS BUTTON ===== */
+/* ===== PREMIUM BUTTON ===== */
 .btn {
     display:inline-block;
     margin:10px;
-    padding:12px 25px;
-    border-radius:30px;
+    padding:14px 28px;
+    border-radius:40px;
     text-decoration:none;
     color:white;
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.15);
-    border:1px solid rgba(255,255,255,0.3);
-    transition:0.3s;
+    font-weight:500;
+    background: linear-gradient(45deg,#ff00cc,#3333ff);
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    transition:0.4s;
 }
 
 .btn:hover {
-    transform:scale(1.1);
-    background: rgba(255,255,255,0.25);
+    transform:translateY(-3px) scale(1.1);
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
 /* ===== SECTION ===== */
 .section {
-    padding:50px 20px;
+    padding:60px 20px;
     max-width:1100px;
     margin:auto;
 }
 
 /* ===== GLASS CARD ===== */
 .card {
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.1);
     padding:25px;
     border-radius:20px;
     margin-bottom:25px;
@@ -80,24 +95,22 @@ body {
     border:1px solid rgba(255,255,255,0.2);
     box-shadow:0 10px 30px rgba(0,0,0,0.3);
     transition:0.4s;
+    animation: fadeUp 1s ease;
 }
 
 .card:hover {
-    transform:translateY(-5px);
+    transform:translateY(-8px);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1; transform:translateY(0);}
 }
 
 /* ===== TITLES ===== */
 h2 {
-    color:#fff;
     margin-bottom:10px;
-}
-
-/* ===== LIST ===== */
-ul {
-    padding-left:20px;
-}
-li {
-    margin:8px 0;
 }
 
 /* ===== GALLERY ===== */
@@ -112,16 +125,28 @@ li {
     transition:0.4s;
 }
 .gallery img:hover {
-    transform:scale(1.05);
+    transform:scale(1.08);
+}
+
+/* ===== FLOATING BUTTON ===== */
+.whatsapp-float {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px 18px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 /* ===== FOOTER ===== */
 .footer {
     text-align:center;
-    padding:25px;
-    color:#fff;
-    font-size:14px;
-    background: rgba(0,0,0,0.3);
+    padding:20px;
+    background:rgba(0,0,0,0.3);
 }
 
 </style>
@@ -151,10 +176,7 @@ li {
 
 <div class="card">
 <h2>👗 About Us</h2>
-<p>
-Mishtaab Fashions is your one-stop destination for stylish and affordable clothing. 
-We offer modern designs, premium fabrics, and trendy collections for all age groups.
-</p>
+<p>Stylish, affordable & trendy fashion for every generation.</p>
 </div>
 
 <div class="card">
@@ -164,17 +186,6 @@ We offer modern designs, premium fabrics, and trendy collections for all age gro
 <li>Gents Wear – Shirts, T-Shirts, Jeans</li>
 <li>Kids Wear</li>
 <li>Ethnic & Festive Collection</li>
-<li>Daily Wear</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>⭐ Why Choose Us</h2>
-<ul>
-<li>Premium Quality Products</li>
-<li>Latest Fashion Trends</li>
-<li>Affordable Pricing</li>
-<li>Friendly Customer Service</li>
 </ul>
 </div>
 
@@ -189,12 +200,13 @@ We offer modern designs, premium fabrics, and trendy collections for all age gro
 
 <div class="card">
 <h2>📍 Visit Us</h2>
-<p>Renu Arcade, HBR Layout, Bangalore</p>
-
-<a class="btn" href="https://maps.app.goo.gl/wmHBUsMnBCAQAjuG7?g_st=aw" target="_blank">📍 Location</a>
+<a class="btn" href="https://maps.app.goo.gl/wmHBUsMnBCAQAjuG7?g_st=aw" target="_blank">Open Location</a>
 </div>
 
 </div>
+
+<!-- FLOAT BUTTON -->
+<a href="https://wa.me/919035398801" class="whatsapp-float">💬</a>
 
 <div class="footer">
 Powered by TeraSyncTech 🚀
